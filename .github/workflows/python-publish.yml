@@ -41,3 +41,4 @@ jobs:
         name: ${{secrets.DOCKERHUB_REPO}}
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
+        dockerfile: Dockerfile
