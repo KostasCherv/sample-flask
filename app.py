@@ -29,7 +29,7 @@ def index():
 
 
 @app.route("/about")
-def index():
+def about():
     return "About page"
 
 @app.route('/drinks')
