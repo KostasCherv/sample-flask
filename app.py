@@ -5,26 +5,32 @@ app = Flask(__name__)
 data = {
     "drinks": [
         {
-            "name": "Grape", 
+            "name": "Grape",
             "description": "Delicious grape fruit drink",
             "date": datetime.now()
-		},
-		{
-            "name": "Lemon", 
+        },
+        {
+            "name": "Lemon",
             "description": "Undiluted lemon fruit drink",
             "date": datetime.now()
-		},
-		{
-            "name": "Mango", 
+        },
+        {
+            "name": "Mango",
             "description": "This is a mango fruit",
             "date": datetime.now()
-		}
+        }
     ]
-} 
+}
+
 
 @app.route("/")
 def index():
-        return "Welcome To My Drinks API"
+    return "Welcome To My Drinks API"
+
+
+@app.route("/about")
+def index():
+    return "About page"
 
 @app.route('/drinks')
 def get_drinks():
