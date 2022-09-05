@@ -35,6 +35,8 @@ jobs:
         pip install -r requirements.txt 
     - name: Check docker installed or not
       run: docker run hello-world
+    - name: Log env variables
+      run: echo "The API key is:${{secrets.DOCKER_USERNAME}}"   
     - name: Publish to Registry
       uses: elgohr/Publish-Docker-Github-Action@v4
       with:
